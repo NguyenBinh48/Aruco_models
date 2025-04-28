@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="aruco_21">
+    <link name="link">
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>3.7499999999999997e-06</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>1.8750008333333333e-06</iyy>
+          <iyz>0.0</iyz>
+          <izz>1.8750008333333e-06</izz>
+        </inertia>
+      </inertial>
+
+      <!-- Front ArUco visual -->
+      <visual name="front_visual">
+        <pose>0.026 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.001 0.15 0.15</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://aruco_21/materials/scripts</uri>
+            <uri>model://aruco_21/materials/textures</uri>
+            <name>ArucoVisualMarker21/Marker</name>
+          </script>
+        </material>
+      </visual>
+
+      <!-- Rear ArUco visual -->
+      <visual name="rear_visual">
+        <pose>-0.026 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.001 0.15 0.15</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://aruco_21/materials/scripts</uri>
+            <uri>model://aruco_21/materials/textures</uri>
+            <name>ArucoVisualMarker21/Marker</name>
+          </script>
+        </material>
+      </visual>
+
+      <!-- Solid base box -->
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.15 0.15</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <!-- Also show the base visually -->
+      <visual name="base_visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.15 0.15</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.6 0.6 0.6 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
+
